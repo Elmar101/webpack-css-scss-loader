@@ -7,7 +7,7 @@ module.exports = {
 		index: "./src/index.js",
 	},
 	output: {
-		filename: "./js/[name].bundle.js",
+		filename: "./js/[name].[contenthash].js",
 		path: path.resolve(__dirname, "dist"),
 		clean: true, // uyqulamani her defe run ve ya build etdikde  dist klasörü temizlemek
 	},
@@ -19,15 +19,7 @@ module.exports = {
 			inject: "body",
 			filename: "./index.html",
 			scriptLoading: "defer",
-			templateContent: `<div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-            </div>`,
+            template: "./src/home/home.html",
 			favicon: "./src/assets/favicon-16x16.png",
 			meta: {
 				viewport: "width=device-width, initial-scale=1, shrink-to-fit=no",

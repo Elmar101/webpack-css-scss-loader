@@ -1,4 +1,4 @@
 export const fn = () => {
-  console.log("i am home");
+  console.log("i am home hello");
   
 }
